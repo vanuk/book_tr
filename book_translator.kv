@@ -1,0 +1,37 @@
+BoxLayout:
+    orientation: 'vertical'
+    padding: 10
+    spacing: 10
+
+    ScrollView:
+        size_hint: 1, None
+        height: "200dp"
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            height: self.minimum_height
+
+            Button:
+                text: "Word1"
+                size_hint_y: None
+                height: "50dp"
+                on_press: app.on_word_click("Word1")
+
+            Button:
+                text: "Word2"
+                size_hint_y: None
+                height: "50dp"
+                on_press: app.on_word_click("Word2")
+
+            Button:
+                text: "Word3"
+                size_hint_y: None
+                height: "50dp"
+                on_press: app.on_word_click("Word3")
+
+    Label:
+        id: translation_label
+        text: "Translation: "
+        font_size: "20sp"
+        size_hint_y: None
+        height: "50dp"
